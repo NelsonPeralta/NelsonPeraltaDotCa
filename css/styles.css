@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    background-color: rgb(240, 240, 240);
+}
+
+.navigation li {
+    display: inline;
+    padding-left: 1rem;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: black;
+    transition-duration: 200ms;
+}
+
+.navigation ul a:hover{
+    border-top: 1px solid black;
+    padding-top: 3px;
+}
+
+#navigation-mobile-hamburger{
+    display: none;
+}
+
+#navigation-mobile-hamburger img{
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+}
+
+#navigation-mobile-links {
+    display: none;
+    padding: 0 0.5rem;
+    background-color: rgb(240, 240, 240);
+}
+
+#navigation-mobile-links li {
+    /* display: inline; */
+    list-style-type: none; /* Removes bullets */
+    padding: 0.5rem 0;
+    border-top: 1px solid black;
+    text-align: right;
+}
+
+#navigation-mobile-links a {
+    text-decoration: none;
+    color: black;
+    text-align: right;
+}
+
+#presentation-picture {
+    background-image: url('../sprites/ImgProfil1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70rem;
+}
+
+#presentation-title-container {
+    height: fit-content;
+    padding: 10rem 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: fit-content; Experimental. Doesnt work on Firefox*/
+    width: 25rem;
+    font-size: 2rem;
+}
+
+#presentation-title-container h1{
+    border-bottom: solid;
+    padding: 0.5rem 2rem;
+}
+
+#presentation-title-container div {
+    padding-bottom: 10px;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 25rem;
+    font-size: 1.5rem;
+    text-align: justify;
+    line-height: 3rem;
+}
+
+.active-page{
+    font-weight: 600;
+}
+
+/***** Projects Page *****/
+#projects-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* Variables */
+    --project-image-height: 15rem;
+    --project-image-width: calc((var(--project-image-height) * 16) / 9);
+}
+
+.projects-title{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    padding-top: 3rem;
+}
+
+#projects-grid{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem 3rem;
+    gap: 3rem;
+}
+
+.projects-row{
+    padding: 5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.projects-unit{
+    display: flex;
+    flex-direction: column;
+    width: var(--project-image-width);
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.projects-unit img{
+    height: var(--project-image-height);
+    width: var(--project-image-width);
+    margin-bottom: 1rem;
+}
+
+.projects-unit h1, h2, p{
+    font-size: 1rem;
+    margin-top: 0.75rem;
+    text-align: justify;
+}
+
+#navigation-links-mobile li {
+    display: inline;
+}
+
+#navigation-links-mobile a {
+    text-decoration: none;
+    color: black;
+}
+
+#contact-picture{
+    height: 3rem;
+}
+
+/***** End of Contact *****/
+
+/* If the browser is (x)px or smaller, do the following */
+
+/* iPads, Tablets: 481px-768px */
+@media only screen and (max-width: 768px) {
+    #presentation-title-container {
+        height: fit-content;
+        padding: 3rem;
+        max-width: 18rem;
+        font-size: .75rem;
+    }
+    #presentation-picture {
+        background-position: center;
+        height: 32rem;
+    }
+    #about {
+        max-width: 768px;
+        padding: 3rem;
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    /* Test Usage */
+    /* body {
+        color: red;
+    } */
+    #projects-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Mobile devices: 320px-480px */
+
+@media only screen and (max-width: 480px) {
+    .navigation{
+        justify-content: center;
+    }
+    #navigation-links{
+        display: none;
+    }
+    #navigation-links-mobile{
+        display: flex;
+    }
+    #presentation-title-container {
+        height: fit-content;
+        padding: 4rem 0;
+        margin: 0 1rem;
+        width: 6rem;
+        font-size: .6rem;
+    }
+    #presentation-title-container div {
+        padding-bottom: 1px;
+    }
+    #presentation-title-container h1{
+        font-size: 0.5rem;
+        border-bottom: solid 1px;
+        margin: 0;
+        padding: 2px 1rem;
+    }
+    #presentation-title-container p{
+        font-size: 0.25rem;
+        margin: 2px 0;
+    }
+    #presentation-picture {
+        background-position: center;
+        height: 25rem;
+    }
+    #about {
+        max-width: 768px;
+        padding: 2rem 4rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    /* Test Usage */
+    /* body {
+        color: yellow;
+    }     */
+    #projects-grid{
+        grid-template-columns: 1fr;
+    }
+}
