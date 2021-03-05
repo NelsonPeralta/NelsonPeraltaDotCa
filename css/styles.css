@@ -3,13 +3,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+
+    --navigation-bg-color: rgb(240, 240, 240);
 }
+
+/***** Header *****/
 
 .navigation {
     display: flex;
     justify-content: space-between;
     padding: 1rem 3rem;
-    background-color: rgb(240, 240, 240);
+    background-color: var(--navigation-bg-color);
 }
 
 .navigation li {
@@ -58,6 +62,10 @@
     text-align: right;
 }
 
+/***** End of Header *****/
+
+/***** Index *****/
+
 #presentation-picture {
     background-image: url('../sprites/ImgProfil1.jpg');
     background-size: cover;
@@ -100,6 +108,8 @@
     font-weight: 600;
 }
 
+/***** End of Index *****/
+
 /***** Projects Page *****/
 #projects-box{
     display: flex;
@@ -109,7 +119,7 @@
 
     /* Variables */
     --project-image-height: 15rem;
-    --project-image-width: calc((var(--project-image-height) * 16) / 9);
+    --project-image-width: calc((var(--project-image-height) / 3) * 4);
 }
 
 .projects-title{
@@ -162,11 +172,95 @@
     color: black;
 }
 
-#contact-picture{
-    height: 3rem;
+
+
+/***** End of Projects *****/
+
+/***** Contact Form *****/
+
+#contact-main{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
 }
 
-/***** End of Contact *****/
+#contact-wrapper{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+
+    width: 50rem;
+    margin: 4rem 0;
+}
+
+#contact-left h1{
+    text-align: center;
+    font-size: 2rem;
+}
+
+#contact-left p{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#contact-form{
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label, #contact-form input, #contact-form textarea{
+    margin-bottom: 0.5rem;
+}
+
+#contact-form input, #contact-form textarea{
+    padding: 0.5rem;
+}
+
+#contact-form-btn{
+    border: none;
+    border-radius: 5px;
+
+    /* Place Button at the Right*/
+    margin-right: 0;
+    margin-left: auto;
+
+    height: 2rem;
+    width: 10rem;
+}
+
+#contact-picture{
+    width: 100%;
+    border: 8px solid grey;
+}
+
+#contact-right{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/***** End of Contact Form *****/
+
+/***** Footer *****/
+
+#footer-navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--navigation-bg-color);
+    padding: 0.5rem 0;
+}
+
+#footer-navigation img{
+    height: 2rem;
+    margin: 0 0.5rem;
+}
+
+/***** End of Footer *****/
 
 /* If the browser is (x)px or smaller, do the following */
 

@@ -1,6 +1,6 @@
 <header>
         <section class="navigation">
-            <div id="navigation-home-link" style="font-weight: bold;"><a href="index.html">nelsonperalta.ca</a></div>
+            <div id="navigation-home-link" style="font-weight: bold;"><a href="index.php">nelsonperalta.ca</a></div>
             <div id="navigation-links">
                 <ul>
                     <li><a href="projects.php">Projects</a></li>

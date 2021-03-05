@@ -1,14 +1,25 @@
 <?php
 
 if(isset($_POST["submit"])){
-    $name = $_POST["name"]
-    $subject = $_POST["subject"]
-    $sender_email = $_POST["email"]
-    $message = $_POST["message"]
+    
+    $domainName = "NelsonPeralta.ca";
+    
+    $name = $_POST["name"];
+    $sender_email = $_POST["email"];
 
-    $receiver_email = "nelson182@live.ca"
-    $headers = "From: " . $sender_email
-    $txt = "You have received an e-mail from " . $name . ".\n\n" . $message
+    $receiver_email = "nperalta@nelsonperalta.ca";
+    $subject = $_POST["subject"];
+    $message = "Message from " . $name . ":\n\n" . $_POST["message"] . "\n\nSent through the " . $domainName . " contact form.";    
+    $headers = "From: " . $sender_email;
 
-    mail($receiver_email, $subject, $message )
+    $a = mail($receiver_email, $subject, $message, $headers);
+
+    /* Debugging purposes
+    if($a){
+        print("Message was sent");
+    } else {
+        print("Message was NOT sent");
+        print(var_dump($receiver_email, $subject, $message));
+    }
+    */
 }

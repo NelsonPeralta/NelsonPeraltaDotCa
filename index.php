@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <!-- <?php
+    <?php
         include_once 'header.php';
-    ?> -->
+    ?>
     <main>
         <section id="presentation-picture">
             <section id="presentation-title-container">
@@ -29,16 +29,9 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure iusto sunt porro error in possimus. Sequi cumque illum adipisci maxime? Laudantium cupiditate perspiciatis ab voluptatum vel modi iste quod recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis impedit qui labore dicta asperiores error quasi doloremque sapiente, ipsam molestiae fuga iure ut exercitationem facilis harum beatae similique ab voluptas. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores voluptatum expedita consequatur voluptas veritatis. Commodi non doloribus hic! Impedit magnam recusandae voluptatum voluptatem optio repudiandae, cum distinctio facilis dolore sequi.</p>
         </section>
     </main>
-    <footer>
-        <section>
-            <div id="navigation-links-mobile">
-                <ul>
-                    <li><a href="Projects.html">Projects</a></li>
-                    <li style="padding-left: 1rem;"><a href="Contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </section>
-    </footer>
+    <?php
+        include_once 'footer.php';
+    ?>
 </body>
 
 </html>
